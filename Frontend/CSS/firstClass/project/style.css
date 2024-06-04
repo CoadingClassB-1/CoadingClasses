@@ -1,0 +1,47 @@
+body {
+  background-color: rgba(0, 255, 255, 0.089);
+  padding: 4px;
+}
+
+nav {
+  background-color: white;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.logo {
+  padding-right: 1350px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.navItems {
+  padding-right: 50px;
+  font-size: 18px;
+}
+
+main h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.videoSection iframe {
+  border-radius: 6px;
+  margin: 20px;
+}
+
+.audioSection {
+  margin-bottom: 160px;
+}
+
+.audioSection audio {
+  margin: 20px;
+}
+
+footer {
+  background-color: white;
+  padding: 12px;
+  border-radius: 8px;
+  align-items: end;
+  text-align: center;
+}

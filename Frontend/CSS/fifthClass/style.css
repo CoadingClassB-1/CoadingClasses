@@ -1,0 +1,40 @@
+body {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 21px;
+}
+
+.box{
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.box:hover{
+  background-color: blue;
+  transform: translateY(100%);
+}
+
+.loader{
+  width: 200px;
+  height: 200px;
+  border: 6px solid black;
+  border-radius: 50%;
+  border-color: black transparent black transparent;
+  animation: adnan 0.5s linear infinite;
+}
+
+@keyframes adnan{
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}

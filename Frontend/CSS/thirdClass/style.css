@@ -1,0 +1,41 @@
+.firstSection ul li {
+  list-style: decimal;
+}
+
+.firstSection ol li {
+  list-style-type: lower-roman;
+}
+
+body {
+  position: relative;
+  text-align: justify;
+  overflow-y: auto;
+}
+
+.secondSection nav {
+  position: fixed;
+  background-color: red;
+  width: 100vw;
+  top: 0%;
+}
+
+.thirdSection {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: space-around;
+}
+
+.div {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 128, 0, 0.317);
+  color: red;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

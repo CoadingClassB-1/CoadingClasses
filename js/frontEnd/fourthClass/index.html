@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Maniculation - Array</title>
+</head>
+<body>
+
+    <script>
+        // let age = 20
+
+        // if(age==18){
+        //     console.log('You are now become younger')
+        // }else{
+        //     console.log('Enter Again!!!')
+        // }
+
+        // Ternary Operator (?)
+        // age == 18 ? console.log('You are now become younger') : console.log('Enter Again!!!')
+
+        // Template Leterals (``)
+        // console.log(`The age is : ${age}`)
+
+        // Escape Sequences
+       // \n, \t, \r \'
+
+    //    Maniculating Strings
+    //    let name = 'Hamza bhai'
+    //    let name2 = 'bhai'
+    // console.log(name.length)
+    // console.log(name.toUpperCase())
+    // console.log(name.toLowerCase())
+    // console.log(name.replace('Hamza', 'adnan'))
+    // console.log(name.concat(' ',name2))
+    // console.log(name.trim())
+    // console.log(name[0])
+
+    // Maniculating Arrays
+    let array = [1,2,5,6,8,2]
+    let names = ['hamza', 'adnan', 'naser', 'faizaan']
+    // console.log(names[0])
+    // console.log(array.length)
+    // console.log(names[0]='mansoor')
+    // console.log(names.toString())
+    // console.log(names.join(' '))
+    // console.log(names.pop())
+    // console.log(names.push('mansoor'))
+    // console.log(names.shift())
+    // console.log(names.unshift('mansoor'))
+    // console.log(array.concat(names))
+    // console.log(array.sort())
+    // console.log(names.splice(1, 1, 'mansoor'))
+    // console.log(names.slice(2))
+    // console.log(names.reverse())
+
+    // Map in Js
+    // let name = names.map((elem, index)=>{
+    //     console.log(elem, index, array)
+    // })
+
+    // Using forEach
+    // let name = names.forEach((elem, index)=>{
+    //     console.log(elem, index)
+    // })
+
+    // Filter in Js
+    let filteredArray = array.filter((elem)=>{
+        return elem>3
+    })
+
+    let div = document.createElement('div')
+    let upperCase = names.forEach((elem)=>{
+        let firstLetter = elem[0].toUpperCase()
+        let capitalName = (elem.replace(elem[0],firstLetter))
+        document.body.append(capitalName, ' ')  
+    })
+
+    </script>
+</body>
+</html>

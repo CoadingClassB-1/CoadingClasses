@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<style>
+    body button{
+        background-color: rgba(255, 0, 0, 0.269);
+    }
+</style>
+<body>
+    <button id="plus" class="plus">Click Me +</button>
+    <div class="count">0</div>
+    <button class="sub">Click Me -</button>
+    <button class="print">Print</button>
+
+    <button class="button">Want to blast your computer</button>
+
+    <input class="input" type="text">
+
+    <script>
+
+        let plus = document.querySelector('.plus')
+        let count = document.querySelector('.count')
+        let sub = document.querySelector('.sub')
+        let print = document.querySelector('.print')
+        let input = document.querySelector('.input')
+        let button = document.querySelector('.button')
+
+        plus.addEventListener('click', ()=>{
+            let value = parseInt(count.innerHTML)+1
+           count.innerHTML =value
+        })
+
+        sub.addEventListener('click', ()=>{
+            // let value = parseInt(count.innerHTML)-1
+            count.innerHTML= 0
+        })
+
+        print.addEventListener('click', ()=>{
+            console.log('click')
+            window.print()
+        })
+
+        input.addEventListener('keypress', (e)=>{
+            console.log(e)
+        })
+
+        button.addEventListener('click', ()=>{
+            confirm("Are you sure you want to blast your computer!!!")
+            console.log('clicked button')
+        })
+
+    </script>
+</body>
+</html>

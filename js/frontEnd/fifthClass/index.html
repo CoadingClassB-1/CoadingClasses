@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce - Forin - Forof - filter</title>
+</head>
+<body>
+
+    <script>
+        let array = ['hamza', 'adnan', 'naser', 'faizaan']
+        let nos = [1,2]
+
+        let div = document.createElement('div')
+        div.innerHTML = array.join(' ')
+        document.body.append(div)
+
+        let input = document.createElement('input')
+        document.body.append(input)
+
+        // Filtering Method
+        input.addEventListener('keyup', ()=>{
+            let value = input.value
+            let filterName = array.filter((e)=>{
+                return e.includes(value)
+            })
+           div.innerHTML = (filterName.join(' '))
+        })
+
+        // Reduce Method
+        let reduceNos = nos.reduce((acc, curr)=>acc+curr)
+        console.log(reduceNos)
+
+        // Making Objects
+        let obj = {
+            'item' : 'iphone',
+            'price' : '$500',
+            'desc': 'This is the Iphone'
+        }
+
+        // Used for Objects
+        for (const key in obj) {
+            if (Object.hasOwnProperty.call(obj, key)) {
+                const element = obj[key];
+                console.log(element)
+            }
+        }
+
+        // Used for arrays
+        for (const iterator of array) {
+            console.log(iterator)
+        }
+        
+
+    </script>
+</body>
+</html>

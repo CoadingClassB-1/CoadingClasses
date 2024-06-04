@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback - promises - async, await - try, catch</title>
+</head>
+
+<body>
+
+    <script>
+
+        // CallBack Functions
+        // function createDiv(some) {
+        //     let div = document.createElement('div');
+        //     div.innerHTML = some;
+        //     document.body.appendChild(div);
+        // }
+
+        // function myDisplayer(some) {
+        //     createDiv(some);
+        // }
+
+        // function morning() {
+        //     myDisplayer('Good morning');
+        // }
+
+        // function mySecond() {
+        //     myDisplayer("Goodbye");
+        // }
+
+        // morning();
+        // mySecond();
+
+        // Promises
+        // let x = 0
+        // let fetch = new Promise((reslove, reject) => {
+        //     if (x == 0) {
+        //         reslove('ok')
+        //     } else {
+        //         reject('error')
+        //     }
+        // })
+
+        //     .then((value) => {
+        //         myDisplayer(value)
+        //     })
+
+        //     .catch((error) => {
+        //         myDisplayer(error)
+        //     })
+        // console.log(fetch)
+
+        // async - await
+        // async function main() {
+        //     let data = await fetch('https://dummyjson.com/products')
+        //     let res = await data.json()
+        //     console.log(res)
+        // }
+
+        // main()
+
+        // Try - Catch
+        async function main() {
+            let data = await fetch('https://dummyjson.com/products')
+            let res = await data.json()
+            console.log(res)
+        }
+        try {
+            main()
+        }
+        
+        catch{
+            console.log(error)
+        }
+    </script>
+</body>
+
+</html>

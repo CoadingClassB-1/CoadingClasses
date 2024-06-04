@@ -1,0 +1,15 @@
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.center {
+    justify-content: center;
+}
+
+.pointer{
+    cursor: pointer;
+}

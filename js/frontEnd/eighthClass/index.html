@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage and Search Params</title>
+</head>
+
+<body>
+    <button class="plus">plus</button>
+    <div class="div">0</div>
+    <button class="sub">sub</button>
+
+    <script>
+        let no;
+        let div = document.querySelector('.div')
+        let plus = document.querySelector('.plus')
+        let sub = document.querySelector('.sub')
+        let localStorageGet = localStorage.getItem('no')
+
+        if (localStorageGet === null) {
+            no = 0
+        } else {
+            no = Number(localStorageGet)
+        }
+
+        div.innerHTML = no
+
+        plus.addEventListener('click', () => {
+            no += 1 //no = no + 1
+            div.innerHTML = no
+            localStorage.setItem('no', no)
+        })
+
+        sub.addEventListener('click', () => {
+            no -= 1
+            div.innerHTML = no
+            localStorage.setItem('no', no)
+        })
+    </script>
+</body>
+
+</html>

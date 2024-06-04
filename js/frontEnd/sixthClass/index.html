@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event - EventBubbling - setTimeout - setInterval</title>
+</head>
+
+<style>
+    .div {
+        border: 2px solid black;
+        padding: 22px;
+        background-color: rgba(0, 255, 255, 0.386);
+        display: none;
+    }
+
+    .border {
+        border: 2px solid black;
+        color: white;
+    }
+
+    .p-4 {
+        padding: 40px;
+    }
+
+    .parent {
+        background: rgba(255, 0, 0, 0.406);
+    }
+
+    .child {
+        background: rgba(0, 0, 255, 0.521);
+    }
+
+    .subChild {
+        background: rgba(81, 255, 0, 0.406);
+    }
+
+    .grandSubChild {
+        background: rgba(212, 0, 255, 0.406);
+    }
+</style>
+
+<body>
+
+    <div class="div">
+        I am a Div
+    </div>
+
+    <button>Click me!</button>
+
+    <input type="text">
+
+    <div class="parent border p-4"> parent
+        <div class="child border p-4">child
+            <div class="subChild border p-4"> subChild
+                <div class="grandSubChild border p-4"> grandSubChild
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let button = document.querySelector('body button')
+        let div = document.querySelector('.div')
+        let input = document.querySelector('body input')
+        let parent = document.querySelector('.parent')
+        let child = document.querySelector('.child')
+        let subChild = document.querySelector('.subChild')
+        let grandSubChild = document.querySelector('.grandSubChild')
+
+        let show = false
+
+        button.addEventListener('click', () => {
+            setTimeout(() => {
+                if (!show) {
+                    div.style.display = 'block'
+                    show = !show
+                } else {
+                    div.style.display = 'none'
+                    show = !show
+                }
+            }, 1000)
+
+            // show ? { div.style.display = 'block', show = !show } : { div.style.display = 'none', show = !show }
+        })
+
+        input.addEventListener('keyup', () => {
+            let value = input.value
+            let showValue = document.createElement('div')
+            showValue.style.border = '1px solid black'
+            document.body.appendChild(showValue)
+            showValue.innerHTML = value
+        })
+
+        parent.addEventListener('click', () => {
+            event.stopPropagation()
+            alert('parent Clicked')
+        })
+
+        child.addEventListener('click', () => {
+            event.stopPropagation()
+            alert('child Clicked')
+        })
+
+        subChild.addEventListener('click', () => {
+            event.stopPropagation()
+            alert('subChild Clicked')
+        })
+
+        grandSubChild.addEventListener('click', () => {
+            event.stopPropagation()
+            alert('grandSubChild Clicked')
+        })
+
+        // setTimeout(() => {
+        //     alert('One second Completed')
+        // }, 1000);
+
+        let interval = setInterval(() => {
+            alert('One second Completed')
+        }, 1000);
+
+        clearInterval(interval)
+        
+    </script>
+</body>
+
+</html>

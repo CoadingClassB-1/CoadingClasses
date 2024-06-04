@@ -1,0 +1,66 @@
+/* px vh vw em rem % */
+
+body {
+  /* background-color: rgba(153, 205, 50, 0.275); */
+  margin: 22px;
+}
+
+main h1 {
+  font-size: 2em;
+}
+
+.firstSection {
+  width: 80vw;
+  height: 70vh;
+  font-size: 2rem;
+  text-align: justify;
+  border: 2px dotted black;
+  box-shadow: 12px 12px 12px yellowgreen;
+  padding: 12px;
+}
+
+.firstSection h1 {
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstSection h1:hover {
+  color: blue;
+}
+
+.firstSection p {
+  width: 1000px;
+  height: 120px;
+  text-overflow: ellipsis;
+  border: 2px solid black;
+  text-transform: lowercase;
+  padding: 12px;
+  overflow-y: auto;
+}
+
+.firstSection p a {
+  text-decoration: none;
+  color: black;
+  cursor: default;
+}
+
+.secondSection {
+  outline: 2px solid green;
+  padding: 12px;
+}
+
+.secondSection h1 {
+  background-color: red;
+  display: inline;
+}
+
+.thirdSection {
+  text-shadow: 2px 4px 2px black;
+  color: white;
+  border: 2px solid white;
+  box-shadow: 2px 2px 3px black;
+}

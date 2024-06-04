@@ -1,0 +1,55 @@
+.container{
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 30vw 60vw;
+    grid-template-rows: 200px 200px 200px;
+    /* gap: 22px; */
+}
+
+.nav{
+    width: 90vw;
+    height: 4vh;
+    background-color: blue;
+    grid-area: nav;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.leftNav{
+    width: 15vw;
+    height: 90vh;
+    background-color: red;
+    grid-area: leftNav;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.firstMain{
+    width: 90vw;
+    height: 45vh;
+    background-color: aqua;
+    grid-area: firstMain;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.secondMain{
+    width: 90vw;
+    height: 45vh;
+    background-color: black;
+    grid-area: secondMain;
+}
+
+.footer{
+    width: 90vw;
+    height: 4vh;
+    background-color: brown;
+    grid-area: footer;
+}
